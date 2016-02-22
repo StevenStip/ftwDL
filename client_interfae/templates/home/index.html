@@ -1,0 +1,13 @@
+{% if flings %}
+
+    {% for fling in flings %}
+{% load staticfiles %}
+
+        <div>
+        <a href="/home/fling?id={{ fling.id }}"><img src="{{ fling.media.url }}" alt="{{fling.media.text}}" style="height:228px;"> </a><br>
+            {{ fling.created_at }}-{{ fling.country }}
+                       </div>
+    {% endfor %}
+{% else %}
+    <p>No flings are available.</p>
+{% endif %}

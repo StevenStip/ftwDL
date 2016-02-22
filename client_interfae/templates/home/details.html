@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+{% if fling %}
+    {{fling.created_at }} -- {{fling.sender.first_name}}:<br>
+    {{fling.media.text}}
+    <br>
+    <img src="{{fling.media.url}}" style="height:228px;"/>
+{% endif %}
+
+</head>
+<body>
+
+</body>
+</html>
